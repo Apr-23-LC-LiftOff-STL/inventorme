@@ -12,6 +12,7 @@ export default function Forms(){
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
 
+    //TODO correct handleClick to handleSubmit
     const handleClick = (e) => {
       e.preventDefault();
       if(name === "" || email === "" || password === "" || confirmPassword === ""){
