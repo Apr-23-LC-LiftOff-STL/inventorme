@@ -12,8 +12,7 @@ export default function Forms(){
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
 
-    //TODO correct handleClick to handleSubmit
-    const handleClick = (e) => {
+    const handleSubmit = (e) => {
       e.preventDefault();
       if(name === "" || email === "" || password === "" || confirmPassword === ""){
         alert("Please fill out all required fields.")
@@ -30,7 +29,7 @@ export default function Forms(){
  
 
     return(
-    <Form onSubmit={handleClick}>
+    <Form onSubmit={handleSubmit}>
       <Form.Group controlId="formName" className="m-5">
         <Form.Label>Name: </Form.Label>
         <Form.Control type="name" value={name} onChange={(e) => setName(e.target.value)} placeholder="John Doe"></Form.Control>
